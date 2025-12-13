@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import VisionSection from "@/components/VisionSection";
+import VisionSection from "@/components/visionsection";
 
 const categories = [
   "ALL",

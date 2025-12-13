@@ -4,6 +4,7 @@ import SuccessStories from "@/components/successstories";
 import ProjectShowcase from "@/components/projectShowcase";
 import RecentBlogs from "@/components/recentBlogs";
 import Contact from "@/app/contact/page";
+import Solutions from "@/components/solutions";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <SuccessStories />
+      <Solutions />
       <ProjectShowcase />
       <RecentBlogs />
       <Contact />

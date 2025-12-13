@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Send } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -30,7 +31,7 @@ export default function Footer() {
           <Link href="/" className="hover:text-purple-400 transition-colors">
             Home
           </Link>
-          <Link href="#" className="hover:text-purple-400 transition-colors">
+          <Link href="/about" className="hover:text-purple-400 transition-colors">
             About Us
           </Link>
           <Link href="/services" className="hover:text-purple-400 transition-colors">
@@ -49,16 +50,25 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
         {/* Left - Logo and Social Icons */}
         <div className="flex items-center gap-6">
-          {/* Logo */}
-          <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-white font-bold text-lg">
-            B
+          {/* Logo without box */}
+          <div className="w-10 h-10 flex items-center justify-center">
+            <Image
+              src="/image.png"
+              alt="Bytirium"
+              width={40}
+              height={40}
+              className="object-cover"
+              priority
+            />
           </div>
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-3">
             {/* TikTok */}
             <a
-              href="#"
+              href="https://www.tiktok.com/@bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="TikTok"
             >
@@ -68,7 +78,9 @@ export default function Footer() {
             </a>
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="Instagram"
             >
@@ -80,7 +92,9 @@ export default function Footer() {
             </a>
             {/* X (Twitter) */}
             <a
-              href="#"
+              href="https://x.com/bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="Twitter"
             >
@@ -90,7 +104,9 @@ export default function Footer() {
             </a>
             {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="Facebook"
             >
@@ -100,7 +116,9 @@ export default function Footer() {
             </a>
             {/* YouTube */}
             <a
-              href="#"
+              href="https://www.youtube.com/@bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="YouTube"
             >
@@ -110,7 +128,9 @@ export default function Footer() {
             </a>
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/company/bytirium"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-7 h-7 rounded-full border border-gray-600 flex items-center justify-center hover:border-purple-500 transition-colors"
               aria-label="LinkedIn"
             >
@@ -126,10 +146,10 @@ export default function Footer() {
 
         {/* Right - Legal Links */}
         <div className="flex items-center gap-6 text-xs text-gray-400">
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="/privacy" className="hover:text-white transition-colors">
             Privacy Policy
           </Link>
-          <Link href="#" className="hover:text-white transition-colors">
+          <Link href="/terms" className="hover:text-white transition-colors">
             Terms & Conditions
           </Link>
         </div>

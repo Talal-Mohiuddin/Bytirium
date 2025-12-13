@@ -1,30 +1,31 @@
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
+import SvgBack from "@/components/svgback"
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-black">
-      <div className="absolute inset-0 hero-left-glow" aria-hidden="true" />
-      <div className="absolute inset-0 hero-right-glow" aria-hidden="true" />
+    <section className="relative isolate overflow-hidden bg-black h-screen">
+      <SvgBack className="absolute inset-0 z-0" />
       <div className="scanlines" />
 
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-6 md:pt-8 pb-16 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          <div className="relative z-10">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
+          <div className="relative z-10 md:max-w-[520px]">
+            {/* purple glow stripe behind heading */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-2 left-1/2 -translate-x-1/2 w-[160%] h-36 md:h-48 rounded-full bg-[radial-gradient(closest-side,rgba(147,51,234,0.45),transparent)] blur-3xl"
+            />
+            <h1 className="text-3xl md:text-4xl font-semibold leading-[1.05] text-white uppercase tracking-wide">
               <span className="block">TURNING VISION</span>
-              <span className="block bg-gradient-to-r from-purple-500 to-fuchsia-400 bg-clip-text text-transparent">
-                INTO SCALABLE
-              </span>
-              <span className="block bg-gradient-to-r from-purple-500 to-fuchsia-400 bg-clip-text text-transparent">
-                REALITY.
-              </span>
+              <span className="block">INTO SCALABLE</span>
+              <span className="block">REALITY.</span>
             </h1>
-            <p className="mt-6 max-w-lg text-zinc-300">
+            <p className="mt-4 md:mt-5 text-white/80">
               We design and build digital products that drive innovation and business growth.
             </p>
 
-            <div className="mt-10 flex items-center gap-4">
+            <div className="mt-8 flex items-center gap-4">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 rounded-full bg-purple-600 px-5 py-3 text-sm font-semibold text-white hover:bg-purple-500 transition-colors btn-glow"

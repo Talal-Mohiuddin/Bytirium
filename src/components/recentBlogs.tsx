@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function RecentBlogs() {
   return (
@@ -65,7 +66,8 @@ export default function RecentBlogs() {
         >
           Discover The Latest Insights, Tips, And Expert Advice On Digital World
         </p>
-        <button
+        <Link
+          href="/blog"
           style={{
             borderRadius: "9999px",
             padding: "10px 24px",
@@ -78,10 +80,12 @@ export default function RecentBlogs() {
             border: "1px solid rgba(168,85,247,0.8)",
             cursor: "pointer",
             transition: "all 0.2s ease",
+            textDecoration: "none",
+            display: "inline-block",
           }}
         >
           View All Blogs
-        </button>
+        </Link>
       </div>
     </section>
   );
